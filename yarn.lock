@@ -5460,6 +5460,16 @@ neo-async@^2.5.0, neo-async@^2.6.1:
   resolved "https://registry.npm.taobao.org/neo-async/download/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha1-rCetpmFn+ohJpq3dg39rGJrSCBw=
 
+next-compose-plugins@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npm.taobao.org/next-compose-plugins/download/next-compose-plugins-2.2.0.tgz#95cd8eb40ab0652070d76572fb648354191628b0"
+  integrity sha1-lc2OtAqwZSBw12Vy+2SDVBkWKLA=
+
+next-compose@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.npm.taobao.org/next-compose/download/next-compose-0.0.2.tgz#fa26aa6430bc4e34d72fe9e5bca780aef53cf191"
+  integrity sha1-+iaqZDC8TjTXL+nlvKeArvU88ZE=
+
 next-tick@~1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/next-tick/download/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"

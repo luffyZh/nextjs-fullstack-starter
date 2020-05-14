@@ -29,7 +29,7 @@ const UserPage = ({ users }: Props) => (
 );
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const resData = await request.get('http://localhost:3888/api/users');
+  const resData = await request.get('/api/users');
   const users: User[] = resData;
   return { props: { users } };
 };

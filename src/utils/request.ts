@@ -56,12 +56,21 @@ interface ICustomError {
 
 const { API_HOST } = getConfig().publicRuntimeConfig;
 
-const instance = axios.create({ baseURL: API_HOST });
+console.log(API_HOST, 77888999);
+
+const instance = axios.create({
+  baseURL: API_HOST,
+  timeout: 3000,
+  headers: {
+    'X-Custom-Header': 'Next.js luffyzh',
+  },
+  withCredentials: true,
+});
 
 instance.defaults.maxContentLength = Infinity;
 
 async function request<T>(url: string, config: IRequestConfig): Promise<T> {
-  const { params, data, headers, method, timeout = 5000 } = config;
+  const { params, data, headers, method } = config;
 
   // eslint-disable-next-line no-param-reassign
   // 处理这种情况 e.g. v1.0.0/tasks/{taskId}
@@ -80,7 +89,6 @@ async function request<T>(url: string, config: IRequestConfig): Promise<T> {
       headers,
       params,
       data,
-      timeout,
     });
 
     const { code: errorCode, data: result } = res.data;
@@ -117,6 +125,7 @@ async function request<T>(url: string, config: IRequestConfig): Promise<T> {
         message: err.message,
         isAxiosError: true,
       };
+      console.log(process.browser, 111222);
     } else {
       /**
        * 如果不是 axios 自己抛出的异常，那就是系统内部错误，错误返回的还是在数据里
